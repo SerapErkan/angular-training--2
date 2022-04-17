@@ -1,4 +1,7 @@
-import { NgModule } from '@angular/core';
+// Spinner
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgxSpinnerModule } from "ngx-spinner";
+
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -31,8 +34,12 @@ import { ToastrModule } from 'ngx-toastr';
       preventDuplicates:true
     }),
 
+    NgxSpinnerModule, //Spinner
+    
   ],
+
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA], //Spinner
 })
 export class AppModule { }
