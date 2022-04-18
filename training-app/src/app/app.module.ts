@@ -11,10 +11,26 @@ import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { NavbarComponent } from './navbar/navbar.component';
+
+import { SidebarComponent } from './sidebar/sidebar.component';
+
+import {
+  IgxNavigationDrawerModule,
+	IgxRippleModule,
+	IgxToggleModule,
+  IgxNavbarModule,
+  IgxButtonModule,
+  IgxIconModule
+} from 'igniteui-angular';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +49,16 @@ import { ToastrModule } from 'ngx-toastr';
       preventDuplicates: true
     }),
 
-    NgxSpinnerModule
+    NgxSpinnerModule,
+
+    //ignite-UI
+    IgxNavbarModule,
+    IgxButtonModule,
+    IgxIconModule,
+    IgxNavigationDrawerModule,
+    IgxRippleModule,
+    IgxToggleModule,
+  
   ],
 
   providers: [],

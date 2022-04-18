@@ -1,0 +1,12 @@
+@use "igniteui-angular/theming" ;
+
+  $custom-navbar-theme: navbar-theme(
+      $text-color:$text-color,
+      $background:$navbar_background_color,
+      $idle-icon-color: #fffbfb,
+      $hover-icon-color: #8c8c8c
+
+  );
+  
+   
+
