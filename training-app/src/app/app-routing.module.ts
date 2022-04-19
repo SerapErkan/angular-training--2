@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home/home.component';
 
 // import { UserComponent } from './user/user/user.component';
 
@@ -22,8 +23,14 @@ const routes: Routes = [
   },
   {
     path: "data-binding", loadChildren: () => import("./data-binding/data-binding.module").then(m => m.DataBindingModule)
+  },
+  {
+    path: "storage", loadChildren: () => import("./storage/storage.module").then(m => m.StorageModule)
+  },
+  {
+    path: "**", 
+    component: HomeComponent
   }
-
 
 
 ];

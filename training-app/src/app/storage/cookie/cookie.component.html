@@ -1,0 +1,33 @@
+<div class="row" style="margin: 4rem;">
+
+  <div class="col-md-4">
+    Name: <input [(ngModel)]="name" />
+    <hr />
+    cookieValue :{{ cookieValue }}
+    <hr />
+    checkNameCookie:{{ cookieExists }}
+  </div>
+
+  <div class="col-md-4 d-grid gap-4">
+
+    <button class="btn btn-danger" (click)="setItem(name)" type="button">
+      setItem
+    </button>
+    <button class="btn btn-danger" (click)="getItem()" type="button">
+      getItem
+    </button>
+    <button class="btn btn-danger" (click)="clearItem()" type="button">
+      clearItem
+    </button>
+    <button class="btn btn-danger" (click)="checkNameCookie()" type="button">
+      checkNameCookie
+    </button>
+  </div>
+
+  <div class="col-md-4">
+   
+    <button class="btn btn-secondary btn-lg"  [routerLink]="['../local-storage']" type="button">Go to LocalStorage</button>
+
+  </div>
+
+</div>
