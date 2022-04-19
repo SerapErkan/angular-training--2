@@ -1,0 +1,113 @@
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <br />
+    <h4>One Way Binding</h4>
+    <h6><span class="badge bg-secondary">from Component to DOM </span></h6>
+  </div>
+  <div class="col-md-4"></div>
+</div>
+<hr />
+
+<div class="row">
+  <div class="col-md-4">
+    <h5>String Interpolation</h5>
+  </div>
+  <div class="col-md-4">
+    <h5>Ad:{{ data.name }}</h5>
+    <h5>Soyad :{{ data.surname }}</h5>
+    <h5>Meslek :{{ data.job }}</h5>
+    <img height="160px" src="{{ data.image }}" alt="favorite_place_image" />
+  </div>
+  <div class="col-md-4">...</div>
+</div>
+
+<hr />
+<div class="row">
+  <div class="col-md-4">
+    <h5>Property Binding</h5>
+  </div>
+  <div class="col-md-4">
+    <input type="text" [value]="data.name" />
+  </div>
+  <div class="col-md-4">...</div>
+</div>
+<hr />
+
+<div class="row">
+  <div class="col-md-4">
+    <h5>Attribute Binding</h5>
+  </div>
+  <div class="col-md-4">
+    <input
+      type="text"
+      [value]="data.job"
+      [attr.disabled]="!data.isEditable ? 'disabled' : null"
+    />
+    <button (click)="changeEditable()">Edit</button>
+  </div>
+  <div class="col-md-4">...</div>
+</div>
+
+<hr />
+
+<div class="row">
+  <div class="col-md-4">
+    <h5>Class Binding</h5>
+  </div>
+  <div class="col-md-4">
+    <P [class.red]="data.isEditable">Class Binding</P>
+    <P [class]="data.isEditable ? 'red' : 'aqua'"> Class Binding 2</P>
+    <p [class.red]="data.name === 'Serap' ? true : false">Data</p>
+  </div>
+  <div class="col-md-4">...</div>
+</div>
+<hr />
+
+<div class="row">
+  <div class="col-md-4">
+    <h5>Style Binding</h5>
+  </div>
+  <div class="col-md-4">
+    <P [style.color]="data.name === 'Serap' ? 'green' : 'blue'"> Style Color</P>
+  </div>
+  <div class="col-md-4">...</div>
+</div>
+<hr />
+
+<hr />
+<div class="row">
+  <div class="col-md-4">
+    <h3>Event Binding</h3>
+    <h6><span class="badge bg-secondary">from DOM to Component</span></h6>
+  </div>
+  <div class="col-md-4">
+    <input
+      placeholder=".... "
+      type="text"
+      [value]=""
+      (keyup.enter)="inputSubmit($event)"
+    />
+  </div>
+  <div class="col-md-4">...</div>
+</div>
+<hr />
+
+<div class="row">
+  <br />
+  <div class="col-md-3"><h4>Two Way Binding</h4></div>
+  <div class="col-md-6">
+    <h4>
+      <span class="badge bg-secondary"
+        >from Component to DOM - from DOM to Component</span
+      >
+    </h4>
+    <h4>
+      ngModel :
+      <input type="text" [(ngModel)]="data.name" />
+    </h4>
+  </div>
+  <div class="col-md-3">
+    <h2>{{ data.name }}</h2>
+  </div>
+</div>
