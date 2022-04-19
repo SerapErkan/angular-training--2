@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home/home.component';
 
 // import { UserComponent } from './user/user/user.component';
 
@@ -25,8 +26,11 @@ const routes: Routes = [
   },
   {
     path: "storage", loadChildren: () => import("./storage/storage.module").then(m => m.StorageModule)
+  },
+  {
+    path: "**", 
+    component: HomeComponent
   }
-
 
 
 ];

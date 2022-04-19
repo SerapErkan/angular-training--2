@@ -14,6 +14,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { CookieService } from 'ngx-cookie-service';
 
 import {
   IgxNavigationDrawerModule,
@@ -61,7 +62,7 @@ import {
   
   ],
 
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA], //Spinner
 })
