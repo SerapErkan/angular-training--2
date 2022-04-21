@@ -4,6 +4,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from '../home/home/home.component';
+import { HighlightDirective } from 'src/libs';
 
 const routers: Routes = [
   {
@@ -16,7 +17,7 @@ const routers: Routes = [
 
 @NgModule({
   declarations: [
-    DirectivesComponent
+    DirectivesComponent,HighlightDirective
   ],
   imports: [
     CommonModule,RouterModule.forChild(routers) , FormsModule
