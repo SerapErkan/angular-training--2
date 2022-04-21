@@ -10,18 +10,34 @@ export class HighlightDirective {
  el.nativeElement.style.backgroundColor="orange"; // arkaplan rengini değiştir
   }
 
+  // @HostListener('mouseenter') onMouseEnter() {
+  //   this.highlight('blue');
+  // }
+
+  // @HostListener('mouseleave') onMouseLeave() {
+  //   this.highlight('red');
+  // }
+
+  // private highlight(color: string) {
+  //   this.el.nativeElement.style.backgroundColor = color;
+  // }
+
   @HostListener('mouseenter') onMouseEnter() {
-    this.highlight('blue');
+    this.makeInvisible();
   }
 
   @HostListener('mouseleave') onMouseLeave() {
-    this.highlight('red');
+    this.makeVisible();
   }
 
   private highlight(color: string) {
     this.el.nativeElement.style.backgroundColor = color;
   }
-
-
+  makeInvisible(){
+    this.el.nativeElement.style="visibility:hidden";
+  }
+  makeVisible(){
+    this.el.nativeElement.style="visibility:visible";
+  }
 
 }
