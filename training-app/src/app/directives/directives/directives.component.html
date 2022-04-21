@@ -1,0 +1,63 @@
+<div class="d-flex justify-content-center">
+  <h2>Angular Directives</h2>
+</div>
+
+<h3 class="p-3 mb-2 bg-dark text-white" style="display: inline-block">
+  Structural Directive
+</h3>
+<br />
+
+<div class="row">
+  <div class="col-md-3">
+    <h4>*ngIf</h4>
+    <h2 *ngIf="title"><span class="badge bg-warning">Title ...</span></h2>
+    <button class="btn btn-warning" (click)="changeTitle()">toggle</button>
+
+    <input type="text" [(ngModel)]="name" />
+    <p *ngIf="name === 'Serap'">isim Serap ...</p>
+
+    <div *ngIf="title; then titleExist; else titleNoExist"></div>
+    <ng-template #titleExist>Title var </ng-template>
+    <ng-template #titleNoExist>Title yok </ng-template>
+  </div>
+  <div class="col-md-3">
+    <h4>*ngSwitch</h4>
+    <input type="text" [(ngModel)]="userName" />
+    <br />
+    <ul [ngSwitch]="userName">
+      <li *ngSwitchCase="'Serap'">isim Serap</li>
+      <li *ngSwitchCase="'Ahmet'">isim Ahmet</li>
+      <li *ngSwitchDefault>İsim ....</li>
+    </ul>
+  </div>
+  <div class="col-md-3">
+    <h4>*ngFor</h4>
+
+    <!-- <ul>
+    <li *ngFor ="let city of cities ; let i=index " >
+     <h2></h2> 
+      <h2></h2>
+      <h2></h2>
+
+    </li>
+</ul> -->
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">name</th>
+          <th scope="col">age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let city of cities; let i = index">
+          <th scope="row">{{ city.id }}</th>
+
+          <td>{{ city.name }}</td>
+          <td>{{ city.age }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
