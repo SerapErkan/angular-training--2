@@ -1,0 +1,116 @@
+<div class="d-flex justify-content-center">
+  <h2>Angular Directives</h2>
+</div>
+
+<h3 class="p-3 mb-2 bg-dark text-white" style="display: inline-block">
+  Structural Directive
+</h3>
+<br />
+
+<div class="row">
+  <div class="col-md-3">
+    <h4>*ngIf</h4>
+    <h2 *ngIf="title"><span class="badge bg-warning">Title ...</span></h2>
+    <button class="btn btn-warning" (click)="changeTitle()">toggle</button>
+
+    <input type="text" [(ngModel)]="name" />
+    <p *ngIf="name === 'Serap'">isim Serap ...</p>
+
+    <div *ngIf="title; then titleExist; else titleNoExist"></div>
+    <ng-template #titleExist>Title var </ng-template>
+    <ng-template #titleNoExist>Title yok </ng-template>
+  </div>
+  <div class="col-md-3">
+    <h4>*ngSwitch</h4>
+    <input type="text" [(ngModel)]="userName" />
+    <br />
+    <ul [ngSwitch]="userName">
+      <li *ngSwitchCase="'Serap'">isim Serap</li>
+      <li *ngSwitchCase="'Ahmet'">isim Ahmet</li>
+      <li *ngSwitchDefault>İsim ....</li>
+    </ul>
+  </div>
+  <div class="col-md-3">
+    <h4>*ngFor</h4>
+
+    <!-- <ul>
+    <li *ngFor ="let city of cities ; let i=index " >
+     <h2></h2> 
+      <h2></h2>
+      <h2></h2>
+
+    </li>
+</ul> -->
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">name</th>
+          <th scope="col">age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let city of cities; let i = index">
+          <th scope="row">{{ city.id }}</th>
+
+          <td>{{ city.name }}</td>
+          <td>{{ city.age }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<hr />
+
+<div class="row">
+  <h4>Attribute Directives</h4>
+  <hr />
+  <div class="col-md-4">
+    <h4>Class Directive</h4>
+
+    <input type="text" [(ngModel)]="color" />
+    <p [ngClass]="color === 'blue' ? 'blue' : 'red'">RENK DEĞİŞTİR</p>
+
+    <h3
+      [ngClass]="{
+        red: color === 'red',
+        blue: color === 'blue',
+        purple: color === 'purple'
+      }"
+    >
+      COLOR
+    </h3>
+  </div>
+
+  <div class="col-md-4">
+    <h4>Style Directive</h4>
+    <input type="text" [(ngModel)]="color" />
+    <p [ngStyle]="{ color: color }">Style Color</p>
+    <p [ngStyle]="{ color: color === 'red' ? 'red' : 'blue' }">Style Color</p>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <h4>Custom Directive</h4>
+  <div class="col-md-4">
+    <div appHighlight>Serap</div>
+
+<!-- data -->
+<p appHighlight [highlightColor]="'yellow'" >
+Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+Aliquam optio laudantium ab eius libero necessitatibus ut
+ sequi a, recusandae aliquid beatae deserunt enim saepe. 
+ Eum dicta rem eveniet voluptates corrupti.
+</p>
+<!-- string -->
+<p appHighlight highlightColor="grey">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+  Aliquam optio laudantium ab eius libero necessitatibus ut
+   sequi a, recusandae aliquid beatae deserunt enim saepe. 
+   Eum dicta rem eveniet voluptates corrupti.
+  </p>
+  </div>
+</div>
