@@ -22,22 +22,40 @@ export class HighlightDirective {
   //   this.el.nativeElement.style.backgroundColor = color;
   // }
 
+  // @HostListener('mouseenter') onMouseEnter() {
+  //   this.makeInvisible();
+  // }
+
+  // @HostListener('mouseleave') onMouseLeave() {
+  //   this.makeVisible();
+  // }
+
+  // private highlight(color: string) {
+  //   this.el.nativeElement.style.backgroundColor = color;
+  // }
+  // makeInvisible(){
+  //   this.el.nativeElement.style="visibility:hidden";
+  // }
+  // makeVisible(){
+  //   this.el.nativeElement.style="visibility:visible";
+  // }
+  
   @HostListener('mouseenter') onMouseEnter() {
-    this.makeInvisible();
+    this.makeBigger();
   }
 
   @HostListener('mouseleave') onMouseLeave() {
-    this.makeVisible();
+    this.makeSmaller();
   }
 
   private highlight(color: string) {
     this.el.nativeElement.style.backgroundColor = color;
   }
-  makeInvisible(){
-    this.el.nativeElement.style="visibility:hidden";
+  makeBigger(){
+    this.el.nativeElement.style="font-size:2rem";
   }
-  makeVisible(){
-    this.el.nativeElement.style="visibility:visible";
+  makeSmaller(){
+    this.el.nativeElement.style="fony-size:0.8rem"
   }
 
 }
