@@ -10,7 +10,8 @@ export class DirectivesComponent implements OnInit {
   title = false;
   name = "";
   userName = "";
-
+ color ="";
+ 
   cities = [
     {
       id: 1,

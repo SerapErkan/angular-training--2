@@ -61,3 +61,32 @@
     </table>
   </div>
 </div>
+<hr />
+
+<div class="row">
+  <h4>Attribute Directives</h4>
+  <hr />
+  <div class="col-md-4">
+    <h4>Class Directive</h4>
+
+    <input type="text" [(ngModel)]="color" />
+    <p [ngClass]="color === 'blue' ? 'blue' : 'red'">RENK DEĞİŞTİR</p>
+
+    <h3
+      [ngClass]="{
+        red: color === 'red',
+        blue: color === 'blue',
+        purple: color === 'purple'
+      }"
+    >
+      COLOR
+    </h3>
+  </div>
+
+  <div class="col-md-4">
+    <h4>Style Directive</h4>
+    <input type="text" [(ngModel)]="color" />
+    <p [ngStyle]="{ color: color }">Style Color</p>
+    <p [ngStyle]="{ color: color === 'red' ? 'red' : 'blue' }">Style Color</p>
+  </div>
+</div>
