@@ -8,14 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PipesComponent implements OnInit {
 
-
-  title="mErHaBa dÜnYA (i)";
-  turkishUpperCaseVal="";
+  today = "";
+  title = "mErHaBa dÜnYA (i)";
+  turkishUpperCaseVal = "";
+cashValue=2000;
 
   constructor() { }
 
   ngOnInit() {
-    this.turkishUpperCaseVal=(this.title as any).toLocaleUpperCase("tr-TR");
+    this.turkishUpperCaseVal = (this.title as any).toLocaleUpperCase("tr-TR");
+    this.today = new Date().toDateString();
+
   }
 
 }

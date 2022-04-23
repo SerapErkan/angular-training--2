@@ -38,4 +38,33 @@
   </div>
   <hr>
 
+  <div class="row">
+    <div class="col-md-4">
+      <h4> normal date: {{ today }}</h4>
+    </div>
+    <div class="col-md-4">
+      <h4> {{ today | date :"dd/MMM/yy"  }}</h4>
+    </div>
+    <div class="col-md-4">
+      <h4>{{ today | date : 'long' }}</h4>
+    </div>
+  </div>
 
+
+
+  <h4>{{ today | date : 'fullDate' :"": "tr-TR"}}</h4>
+
+  <br>
+  <hr>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h4>currency pipes: {{cashValue }}</h4>
+    </div>
+    <div class="col-md-4">
+      <h4> {{ cashValue | currency}}</h4>
+    </div>
+    <div class="col-md-4">
+      <h4> {{ cashValue | currency : "TRY":"symbol":"1.2-2":"tr-TR"}}</h4>
+    </div>
+  </div>
