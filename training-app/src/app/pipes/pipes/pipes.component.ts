@@ -11,7 +11,15 @@ export class PipesComponent implements OnInit {
   today = "";
   title = "mErHaBa dÜnYA (i)";
   turkishUpperCaseVal = "";
-cashValue=2000;
+  cashValue = 2000;
+
+  objectVal: object = [
+    {
+      name: "serap",
+      age: 27,
+      nested: { xyz: 3, number: [1, 2, 3, 4, 5] }
+    }
+  ]
 
   constructor() { }
 
