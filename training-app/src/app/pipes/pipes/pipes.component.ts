@@ -10,12 +10,12 @@ export class PipesComponent implements OnInit {
 
 
   title="mErHaBa dÜnYA (i)";
-
+  turkishUpperCaseVal="";
 
   constructor() { }
 
   ngOnInit() {
-
+    this.turkishUpperCaseVal=(this.title as any).toLocaleUpperCase("tr-TR");
   }
 
 }
