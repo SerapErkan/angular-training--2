@@ -22,6 +22,15 @@ export class PipesComponent implements OnInit {
       nested: { xyz: 3, number: [1, 2, 3, 4, 5] }
     }
   ]
+  cities = [
+    "istanbul",
+    "izmir",
+    "ankara",
+    "edirne",
+    "mersin",
+    "antalya",
+    "samsun"
+  ];
 
   constructor() { }
 
