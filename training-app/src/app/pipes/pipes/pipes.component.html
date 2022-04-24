@@ -1,0 +1,118 @@
+<div class="row">
+  <div class="col-md-4">
+    <h4>normal: {{ title }}</h4>
+  </div>
+  <div class="col-md-4">
+    <h4>lowercase =></h4>
+  </div>
+  <div class="col-md-4">
+    <h4>{{ title | lowercase }}</h4>
+  </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+      <h4>normal: {{ title }}</h4>
+    </div>
+    <div class="col-md-4">
+      <h4> titlecase =></h4>
+    </div>
+    <div class="col-md-4">
+      <h4>{{ title | titlecase }}</h4>
+    </div>
+  </div>
+  <hr>
+
+
+  <div class="row">
+    <div class="col-md-4">
+      <h4>normal: {{ title }}</h4>
+    </div>
+    <div class="col-md-4">
+      <h4> uppercase =></h4>
+    </div>
+    <div class="col-md-4">
+      <h4>{{ title | uppercase }}</h4>
+      <h4>turkish uppercase : {{turkishUpperCaseVal}}</h4>
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h4> normal date: {{ today }}</h4>
+    </div>
+    <div class="col-md-4">
+      <h4> {{ today | date :"dd/MMM/yy"  }}</h4>
+    </div>
+    <div class="col-md-4">
+      <h4>{{ today | date : 'long' }}</h4>
+    </div>
+  </div>
+
+
+
+  <h4>{{ today | date : 'fullDate' :"": "tr-TR"}}</h4>
+
+  <br>
+  <hr>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h4>currency pipes: {{cashValue }}</h4>
+    </div>
+    <div class="col-md-4">
+      <h4> {{ cashValue | currency}}</h4>
+    </div>
+    <div class="col-md-4">
+      <h4> {{ cashValue | currency : "TRY":"symbol":"1.2-2":"tr-TR"}}</h4>
+    </div>
+  </div>
+
+
+  <hr>
+  <br>
+  <h4>{{objectVal | json }}</h4>
+  <br>
+  <hr>
+
+  <hr>
+  <br>
+  <h4>{{percentVal| percent:"":"tr-TR" }}</h4>
+  <br>
+  <hr>
+
+  <hr>
+  <br>
+  <h4>{{cityName | slice:0:2 }}</h4>
+  <br>
+  <hr>
+
+
+  
+  <div class="row">
+    <div class="col-md-4">
+      <h4>Custom pipes</h4>
+    </div>
+    <div class="col-md-4">
+      <h4> {{ cashValue | tl}}</h4> 
+    </div>
+    <div class="col-md-4">
+      <h4> {{ cashValue | currency : "TRY":"symbol":"1.2-2":"tr-TR"}}</h4>
+    </div>
+  </div>
+
+
+  <div class="col-md-3">
+    <h3>Custom Pipes</h3>
+  
+    <br />
+    <h4>Cities</h4>
+    <ul>
+      <li *ngFor="let city of cities | myFilteringPipe : 'a'">{{ city }}</li>
+    </ul>
+  </div>
+
+
+
+ 
