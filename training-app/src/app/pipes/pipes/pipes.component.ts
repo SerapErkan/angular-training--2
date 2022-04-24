@@ -12,6 +12,8 @@ export class PipesComponent implements OnInit {
   title = "mErHaBa dÜnYA (i)";
   turkishUpperCaseVal = "";
   cashValue = 2000;
+  percentVal=50;
+  cityName ="ANKARA";
 
   objectVal: object = [
     {
