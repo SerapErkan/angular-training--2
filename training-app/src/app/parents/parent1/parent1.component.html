@@ -1,2 +1,18 @@
 <p>parent1 works!</p>
-<app-child1></app-child1>
+
+
+<input type="text" [(ngModel)]="name">
+
+data-binding :{{name}}
+
+<!-- data  -->
+<app-child1 [nameVal]="name"></app-child1> 
+
+<!-- 
+ string 
+<app-child1 nameVal="name"></app-child1> 
+
+ *data string name 
+
+<app-child1 [nameVal]="'name'"></app-child1> 
+<app-child1 nameVal="'name'"></app-child1>   -->

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-child1',
@@ -6,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./child1.component.scss']
 })
 export class Child1Component implements OnInit {
+
+// @Input('isim') name:string;
+ // @Input('isim') name:string;
+
+  @Input()
+  nameVal!: string;
+
 
   constructor() { }
 
