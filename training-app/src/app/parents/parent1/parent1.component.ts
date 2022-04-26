@@ -8,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class Parent1Component implements OnInit {
 
   name="";
+  successStatus=0;
+  calculaterData!:any;
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  calculate(){
+this.calculaterData={
+  name:this.name,
+  status:this.successStatus
+};
+  }
 }

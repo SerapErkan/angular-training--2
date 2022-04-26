@@ -9,10 +9,9 @@ import { Input } from '@angular/core';
 export class Child1Component implements OnInit {
 
 // @Input('isim') name:string;
- // @Input('isim') name:string;
 
-  @Input()
-  nameVal!: string;
+
+  @Input() data:any;
 
 
   constructor() { }

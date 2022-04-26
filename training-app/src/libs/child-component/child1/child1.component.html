@@ -1,2 +1,14 @@
+
+<hr>
 <p>child1 works!</p>
- sonuç {{nameVal}}
+ sonuç {{ data |json}}
+
+
+ <hr>
+ <br>
+     <div *ngIf="data" >
+         {{data?.name}} kişisinin 
+         <p *ngIf="data?.status"> Başarılıdır </p>
+         <p *ngIf="!data?.status"> Başarılıdır </p>
+
+     </div>
