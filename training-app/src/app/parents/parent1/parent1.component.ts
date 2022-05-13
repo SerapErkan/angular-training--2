@@ -22,4 +22,8 @@ this.calculaterData={
   status:this.successStatus
 };
   }
+  resetParentForm(){
+    this.name="";
+    this.successStatus=0;
+  }
 }

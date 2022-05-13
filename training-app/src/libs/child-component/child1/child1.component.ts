@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core';
+import { Component, OnInit, Input ,Output,EventEmitter  } from '@angular/core';
+
 
 @Component({
   selector: 'app-child1',
@@ -12,11 +12,17 @@ export class Child1Component implements OnInit {
 
 
   @Input() data:any;
-
+  // <{name,id,...}>
+  @Output() resetForm:EventEmitter<any>=new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  emitForm(event:any){
+  this.resetForm.emit(event);
+}
+
 
 }
