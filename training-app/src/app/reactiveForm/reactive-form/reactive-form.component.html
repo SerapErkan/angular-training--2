@@ -1,0 +1,25 @@
+
+
+
+<div class="row">
+    <div class="col-md-9 off col-md-3">
+
+<form [formGroup]="registerForm" (ngSubmit)="save(registerForm)">
+
+<label >Username:</label>
+<br>
+<input type="text"  formControlName="username">
+<p *ngIf="registerForm?.controls?.username?.errors?.required  && registerForm?.controls?.username?.dirty">*bu alan zorunludur</p>
+<br>
+<label >Age:</label>
+<br>
+<input type="number" formControlName="age">
+
+<hr>
+<button type="submit" [disabled]="!registerForm?.valid" > kaydet </button>
+
+
+</form>
+
+    </div>
+</div>
