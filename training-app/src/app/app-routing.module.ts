@@ -36,7 +36,9 @@ const routes: Routes = [
   {
     path: "parents", loadChildren: () => import("./parents/parents.module").then(m => m.ParentsModule)
   },
-
+  {
+    path: "form", loadChildren: () => import("./reactiveForm/reactive-form.module").then(m => m.ReactiveFormModule)
+  },
   {
     path: "**",
     component: HomeComponent
