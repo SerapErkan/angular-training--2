@@ -9,7 +9,8 @@
 <label >Username:</label>
 <br>
 <input type="text"  formControlName="username">
-<p *ngIf="registerForm?.controls?.username?.errors?.required  && registerForm?.controls?.username?.dirty">*bu alan zorunludur</p>
+<p *ngIf="registerForm?.controls?.username?.errors?.required && registerForm?.controls?.username?.dirty">*bu alan zorunludur</p>
+<p *ngIf="registerForm?.controls?.username?.errors?.blacklist && registerForm?.controls?.username?.dirty " style="color:red;">*ğ harfini kullanamazsınız</p>
 <br>
 <label >Age:</label>
 <br>

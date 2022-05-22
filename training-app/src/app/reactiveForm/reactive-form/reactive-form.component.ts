@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Form, FormControl, FormGroup, Validators } from '@angular/forms';
+import { BlackListValidator } from 'src/libs';
 
 @Component({
   selector: 'app-reactive-form',
@@ -25,7 +26,9 @@ export class ReactiveFormComponent implements OnInit {
       validators:[
         Validators.required,
         Validators.maxLength(20),
-        Validators.minLength(3)
+        Validators.minLength(3),
+        // BlackListValidator("null")
+        BlackListValidator("ğ")
       ]
       }),
       age:new FormControl(0)
